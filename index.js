@@ -14,16 +14,7 @@ mongoose.connect("mongodb+srv://Sousou:Sousou12@cluster0.3ftiagc.mongodb.net/?re
 }).catch((Error)=> console.log('error'))
 
 //Send and save information for database and create new poste in postman 
-app.post('/article', async(req,res)=>{
-   const newArticle = new Article()
-   newArticle.title = req.body.name;
-   newArticle.body =req.body.city;
-   newArticle.numberOfLike = req.body.number ;L
-   await newArticle.save()   
 
-  res.send('the new article module is has been store')
-
-})
 //Get information for database ('it's perfect id')
 app.get('/article',async(req,res)=>{
     const Database = await Article.find()
