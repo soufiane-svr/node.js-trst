@@ -11,7 +11,7 @@ app.use((req, res, next) => {
 //ربط الموقع بقاعدة البيانات
 mongoose.connect("mongodb+srv://Sousou:Sousou12@cluster0.3ftiagc.mongodb.net/?retryWrites=true&w=majority").then(()=>{
     console.log('connected is saccussfully')
-})
+}).
 //Send and save information for database and create new poste in postman 
 app.post('/article', async(req,res)=>{
    const newArticle = new Article()
