@@ -32,6 +32,10 @@ app.post('/posted',async(req,res)=>{
     
      await  res.send('hello world')
 })
+
+app.get('/anahada',(req,res)=>{
+    res.send('tarararar')
+})
 //
 
 
