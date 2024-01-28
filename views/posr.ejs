@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<style>
+    *{
+        margin: 0;
+
+    }
+    body{
+        background-color: rgb(142, 142, 142);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 22px;
+    }
+    .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: aquamarine;
+    width:fit-content;
+    border-radius: 5px;
+    border: 2px solid blue;
+   }
+   .navbar input{
+    margin-bottom: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid black;
+    padding: 5px;
+   }
+   #submit{
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+   }
+   #submit:hover{
+    background-color: yellow;
+    color: black;
+   }
+   .navbar-item{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(36, 39, 38);
+    width: 220px;
+    margin-top: 12px;
+    border-radius: 5px;
+    border: 2px solid blue;
+   }
+   .nav1{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+   }
+   .nav1 h1{
+    font-size: 18px;
+    margin-top: 5px;
+    color: white;
+   }
+   .nav1 h4{
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: white;
+    font-family: sans-serif;
+   }
+   .navbar-item-card{
+    display: flex;
+   }
+   .nav2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+   }
+   .nav2 h6{
+    background-color: red;
+    padding: 5px;
+    border-radius: 50%;
+    color: white;
+   }
+   h1::selection{
+    background-color: yellow ;
+    color: black;
+   }
+</style>
+<body>
+
+    <div class="navbar" style="padding: 15px;">
+        <input type="text" placeholder="name" id="inpName">
+        <input type="number" placeholder="nr" id="number">
+        <input type="email" placeholder="email" id="email">
+        <input type="submit" value="submit" id="btn">
+    </div>
+    <% for( post of posi ) { %>
+        <div class="navbar-item">
+            <div class="navbar-item-card">
+                <div class="nav1">
+                    <h1 id="h1"><%=post.title%></h1>
+                    <h4><%=post.body%></h4>
+                </div>
+                <div class="nav2">
+                    <h6><%=post.numberOfLike%></h6>
+                </div>
+            </div>
+        </div>
+    <% } %>
+</body>
+</html>
