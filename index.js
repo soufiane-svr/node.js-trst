@@ -11,7 +11,7 @@ mongoose.connect("mongodb+srv://Sousou:Sousou12@cluster0.3ftiagc.mongodb.net/?re
 }).catch((Error)=> console.log('error'))
 
 app.get('/art',async(req,res)=>{
-    const art = await  Article.find()
+    const art = await Article.find().maxTimeMS(40000); // زيادة الحد الزمني إلى 30 ثانية
     res.json(art)
 })
 
