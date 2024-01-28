@@ -19,7 +19,7 @@ app.post('/article', async(req,res)=>{
    const newArticle = new Article()
    newArticle.title = req.body.name;
    newArticle.body =req.body.city;
-   newArticle.numberOfLike = req.body.number ;
+   newArticle.numberOfLike = req.body.number ;L
    await newArticle.save()   
 
   res.send('the new article module is has been store')
