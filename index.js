@@ -64,6 +64,9 @@ app.delete('/getid/:articleid',async(req,res)=>{
     post = await Article.findByIdAndDelete(id)
     res.json(post)
 })
+app.get('/',(req,res)=>{
+    res.send('hello world')
+})
 
 
 app.listen(3000,()=>{
