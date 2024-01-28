@@ -66,7 +66,7 @@ app.delete('/getid/:articleid',async(req,res)=>{
 })
 
 
-app.listen(1000,()=>{
+app.listen(3000,()=>{
     console.log('hello soufiane')
 })
  
